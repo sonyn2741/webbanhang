@@ -1,5 +1,5 @@
-package com.config;
-
-public enum PaypalPaymentMethod {
-	credit_card, paypal
-}
+/*
+ * package com.config;
+ * 
+ * public enum PaypalPaymentMethod { credit_card, paypal }
+ */
