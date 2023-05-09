@@ -43,7 +43,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES ('A7','Cristiano Ronaldo','70000000','real',71000000,'new','img/fe659cd1-27a6-4846-85ad-d27795671d86.jpg','Apple','512Gb-64Gb',21),('AP08','Iphone 8','5000000','new',7000000,'black','img/ip8_Web.jpg','Apple','128Gb-32Gb',0),('AP09','ip9','999','old',123213,'new','img/88849c1e-2e47-43d9-a09b-ff223ce8773a.jpg','Apple','123',0),('AP11','Iphone 11','14000000','new',16000000,'green','img/ip11web.jpg','Apple','128Gb-64Gb',0),('AP11P','Iphone 11 pro','18000000','new',20000000,'white','img/ip11proweb.jpg','Apple','512Gb-64Gb',0),('AP13','Iphone 13','26000000','new',27000000,'yellow','img/ip13proweb.jpg','Apple','512Gb-64Gb',22),('AP13P','Iphone 13 pro','28000000','new',30000000,'gray','img/iphone-13-Pro.jpg','Apple','512Gb-64Gb',25),('AP13PM','Iphone 13 promax','32000000','new',34000000,'white','img/iphone-13-promax.jpg','Apple','512Gb-64Gb',29),('APX','Iphone X','8000000','new',9000000,'white','img/ipxweb.jpg','Apple','128Gb-64Gb',22),('SS01','samsung galaxy j5','14000000','new',21000000,'black','img/product-1.jpg','Samsung','256Gb-32Gb',92),('SS02','samsung galaxy note 5','15000000','new',17000000,'black','img/product-6.jpg','Samsung','256Gb-32Gb',23);
+INSERT INTO `product` VALUES ('A7','Cristiano Ronaldo','70000000','real',71000000,'new','img/fe659cd1-27a6-4846-85ad-d27795671d86.jpg','Apple','512Gb-64Gb',0),('AP08','Iphone 8','5000000','new',7000000,'black','img/ip8_Web.jpg','Apple','128Gb-32Gb',11),('AP09','ip9','999','old',123213,'new','img/88849c1e-2e47-43d9-a09b-ff223ce8773a.jpg','Apple','123',17),('AP11','Iphone 11','14000000','new',16000000,'green','img/ip11web.jpg','Apple','128Gb-64Gb',30),('AP11P','Iphone 11 pro','18000000','new',20000000,'white','img/ip11proweb.jpg','Apple','512Gb-64Gb',45),('AP13','Iphone 13','26000000','new',27000000,'yellow','img/ip13proweb.jpg','Apple','512Gb-64Gb',21),('AP13P','Iphone 13 pro','28000000','new',30000000,'gray','img/iphone-13-Pro.jpg','Apple','512Gb-64Gb',25),('AP13PM','Iphone 13 promax','32000000','new',34000000,'white','img/iphone-13-promax.jpg','Apple','512Gb-64Gb',29),('APX','Iphone X','8000000','new',9000000,'white','img/ipxweb.jpg','Apple','128Gb-64Gb',22),('SS01','samsung galaxy j5','14000000','new',21000000,'black','img/product-1.jpg','Samsung','256Gb-32Gb',92),('SS02','samsung galaxy note 5','15000000','new',17000000,'black','img/product-6.jpg','Samsung','256Gb-32Gb',23);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-27 16:23:20
+-- Dump completed on 2023-05-09 19:57:49

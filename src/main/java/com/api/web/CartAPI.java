@@ -45,6 +45,7 @@ public class CartAPI {
 			cart.setIdproduct(ids.substring(1, ids.length()-1));
 			cart.setNum(1);
 			cart.setTotal(price);
+
 			cartMethod.save(cart);
 			return ResponseEntity.ok(cart);
 	}

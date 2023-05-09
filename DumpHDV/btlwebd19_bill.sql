@@ -43,7 +43,7 @@ CREATE TABLE `bill` (
 
 LOCK TABLES `bill` WRITE;
 /*!40000 ALTER TABLE `bill` DISABLE KEYS */;
-INSERT INTO `bill` VALUES ('1','VN','Ha Noi','thanh xuan','nguyen trai','0365478854','2023-04-29',64000000,'nguyenvana','Iphone 13 Promax x 2; '),('2','AF','vinh','hung hoa','chu huy man','+84948847875','2023-02-07',56000000,'nguyenmanh307','Iphone 13 Prox 1; Iphone 13 Prox 1; '),('3','CR','nghe an','vinh','chu huy man','+84948847875','2023-04-26',124000000,'nguyenmanh307','Iphone 11x1; Iphone 13x1; Cristiano Ronaldox1; Iphone 11x1; ');
+INSERT INTO `bill` VALUES ('1','VN','Ha Noi','thanh xuan','nguyen trai','0365478854','2023-04-29',64000000,'nguyenvana','Iphone 13 Promax x 2; '),('2','AF','vinh','hung hoa','chu huy man','+84948847875','2023-02-07',56000000,'nguyenmanh307','Iphone 13 Prox 1; Iphone 13 Prox 1; '),('3','CR','nghe an','vinh','chu huy man','+84948847875','2023-04-26',124000000,'nguyenmanh307','Iphone 11x1; Iphone 13x1; Cristiano Ronaldox1; Iphone 11x1; '),('4','VN','nghe an','vinh','chu huy man','+84948847875','2023-05-06',210000000,'nguyenmanh307','Cristiano Ronaldox2; Cristiano Ronaldox1; '),('5','AF','nghe an','vinh','chu huy man','+84948847875','2023-05-06',5000999,'nguyenmanh307','Iphone 8x1; ip9x1; '),('6','VN','nghe an','vinh','chu huy man','+84948847875','2023-05-06',5000000,'nguyenmanh307','Iphone 8x1; ');
 /*!40000 ALTER TABLE `bill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-27 16:23:20
+-- Dump completed on 2023-05-09 19:57:50
