@@ -29,10 +29,29 @@ public class Bill {
 	private String username;
 	@Column(name="products", nullable=false)
 	private String products;
+	@Column(name = "status")
+	private int status;
 	public Bill() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Bill(String idbill, String country, String city, String county, String hn, String phone, String date,
+			int total, String username, String products, int status) {
+		super();
+		this.idbill = idbill;
+		this.country = country;
+		this.city = city;
+		this.county = county;
+		this.hn = hn;
+		this.phone = phone;
+		this.date = date;
+		this.total = total;
+		this.username = username;
+		this.products = products;
+		this.status = status;
+	}
+
 	public Bill(String idbill, String country, String city, String county, String hn, String phone, String date,
 			int total, String username, String products) {
 		super();
@@ -106,6 +125,14 @@ public class Bill {
 	}
 	public void setProducts(String products) {
 		this.products = products;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 	
 }

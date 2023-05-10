@@ -6,7 +6,7 @@ public class PaymentResDTO implements Serializable{
 	
 	private String status;
 	private String message;
-	private String URL;
+	private String url;
 	public String getStatus() {
 		return status;
 	}
@@ -19,12 +19,13 @@ public class PaymentResDTO implements Serializable{
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public String getURL() {
-		return URL;
+	public String getUrl() {
+		return url;
 	}
-	public void setURL(String uRL) {
-		URL = uRL;
+	public void setUrl(String url) {
+		this.url = url;
 	}
+	
 	
 	
 	

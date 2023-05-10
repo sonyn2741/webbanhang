@@ -3,14 +3,22 @@ package com.Controller.admin;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,21 +26,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.config.VNPayConfig;
 import com.dto.PaymentResDTO;
 import com.dto.TransactionStatusDTO;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
+import com.model.Bill;
 
 @RestController
 @RequestMapping("/api/paymentVNPay")
 public class VNPayController {
 
 	
-	@GetMapping("/create_payment")
-	public ResponseEntity<?> createPayment() throws UnsupportedEncodingException{
+	@PostMapping("/create_payment")
+	public ResponseEntity<?> createPayment(@RequestBody Bill bill,HttpSession session) throws UnsupportedEncodingException{
 		
 //        String orderType = req.getParameter("ordertype");
 //        long amount = Integer.parseInt(req.getParameter("amount"))*100;
 //        String bankCode = req.getParameter("bankCode");
-        
+        session.setAttribute("billOnl", bill);
 		long amount = 100000000;
 		
         String vnp_TxnRef = VNPayConfig.getRandomNumber(8);
@@ -106,7 +113,7 @@ public class VNPayController {
         PaymentResDTO paymentResDTO = new PaymentResDTO();
         paymentResDTO.setStatus("OK");
         paymentResDTO.setMessage("success");
-        paymentResDTO.setURL(paymentUrl);
+        paymentResDTO.setUrl(paymentUrl);
         
 //        com.google.gson.JsonObject job = new JsonObject();
 //        job.addProperty("code", "00");

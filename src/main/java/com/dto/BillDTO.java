@@ -14,6 +14,13 @@ public class BillDTO extends AbstractDTO<BillDTO> {
 	private int total;
 	private String username;
 	private String products;
+	private int status;
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
 	private List<BillDTO> listResultTwo = new ArrayList<>();
 	private List<BillDTO> listResultThree = new ArrayList<>();
 	

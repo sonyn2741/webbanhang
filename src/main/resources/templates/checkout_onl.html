@@ -543,40 +543,11 @@
 
 
                             <form id="login-form-wrap" class="login collapse" method="post">
-
-
-                                
                             </form>
 
-                            <div class="woocommerce-info">Online payment?<a class="showcoupon" id="btn_payment" data-toggle="collapse" href="#coupon-collapse-wrap" aria-expanded="false" aria-controls="coupon-collapse-wrap">Click here to Online payment</a>
+                            <div class="woocommerce-info"><a class="showcoupon" id="btn_payment" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="coupon-collapse-wrap">Paid on VNPAY successful!</a>
                             </div>
                                     <div id="payment">
-                                        <ul class="payment_methods methods">
-                                            
-                                            <li class="payment_method_cheque">
-                                                <input type="radio" data-order_button_text="" value="cheque" name="payment_method" class="input-radio" id="payment_method_cheque">
-                                                <label for="payment_method_cheque">Payment on delivery</label>
-                                                
-                                            </li>
-                                            <li class="payment_method_paypal">
-                                                <input type="radio" data-order_button_text="Proceed to PayPal" value="paypal" name="payment_method" class="input-radio" id="payment_method_paypal">
-                                                <label for="payment_method_paypal">PayPal <img alt="PayPal Acceptance Mark" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png"><a title="What is PayPal?" onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" class="about_paypal" href="https://www.paypal.com/gb/webapps/mpp/paypal-popup">What is PayPal?</a>
-                                                </label>
-                                                
-                                                
-                  <!--                               <form method="post" th:action="@{/pay}">
-													<input type="text" value="5" name="price" />
-													<button type="submit"> Payment with Paypal </button>
-												</form>
-												 -->
-												
-												
-                                                <div style="display:none;" class="payment_box payment_method_paypal">
-                                                    <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-
                                         <div class="form-row place-order">
                                             <input type="submit" data-value="Place order" value="Place order" id="btn-add-bill" name="woocommerce_checkout_place_order" class="button alt">
                                         </div>
@@ -674,16 +645,6 @@
 	<script src="/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/assets/js/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$('#btn_payment').click(function (e) {
-			e.preventDefault();
-			var formData = $('#formCheckout').serializeArray();
-			console.log(formData);
-			var data = {};
-			$.each(formData, function (i, v) {
-				data["" + v.name + ""] = v.value;
-			});
-			pay_vnpay(data);
-		});
 		$('#btn-add-bill').click(function (e) {
 			e.preventDefault();
 			var formData = $('#formCheckout').serializeArray();
@@ -696,28 +657,13 @@
 		});
 		function checkoutbill(data) {
 			$.ajax({
-				url: 'api/web/bill_off',
+				url: '/api/web/bill_onl',
 				type: 'POST',
 				contentType: 'application/json',
 				data: JSON.stringify(data),
 				dataType: 'json',
 				success: function (result) {
 					window.location.href = "/billForm?message=update_success";
-				},
-				error: function (error) {
-					window.location.href = "/billForm?message=error_system";
-				}
-			});
-		}
-		function pay_vnpay(data) {
-			$.ajax({
-				url: '/api/paymentVNPay/create_payment',
-				type: 'POST',
-				contentType: 'application/json',
-				data: JSON.stringify(data),
-				dataType: 'json',
-				success: function (result) {
-					window.location.href =result.url;
 				},
 				error: function (error) {
 					window.location.href = "/billForm?message=error_system";
