@@ -49,7 +49,7 @@ public class VNPayController {
         vnp_Params.put("vnp_OrderInfo", "Thanh toan don hang:" + vnp_TxnRef);
         
         vnp_Params.put("vnp_Locale", "vn");
-        vnp_Params.put("vnp_ReturnURL",VNPayConfig.vnp_Returnurl);
+        vnp_Params.put("vnp_ReturnUrl",VNPayConfig.vnp_Returnurl);
 //        vnp_Params.put("vnp_OrderType", orderType);
 
 //        String locate = req.getParameter("language");
