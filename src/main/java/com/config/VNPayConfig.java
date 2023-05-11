@@ -14,7 +14,7 @@ public class VNPayConfig {
 
 	public static String vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 //    public static String vnp_Returnurl = "http://localhost:8080/vnpay_jsp/vnpay_return.jsp";
-	public static String vnp_Returnurl = "https://wary-art-production.up.railway.app/payment_infor";
+	public static String vnp_Returnurl = "http://localhost:8080/payment_infor";
     public static String vnp_TmnCode = "RHPU87A3";
     public static String vnp_HashSecret = "URGALADWRHFGTMAUJRNAMSVFVRVAVVEJ";
     public static String vnp_apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";

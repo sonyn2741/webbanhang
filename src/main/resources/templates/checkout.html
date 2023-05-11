@@ -536,6 +536,7 @@
                                             <tr class="order-total">
                                                 <th>Order Total</th>
                                                 <td><strong><span class="amount"><span th:text="${sumT}"></span></span></strong> </td>
+                                                <input type="hidden" class="shipping_method" th:value="${sumT}" data-index="0" name="total">
                                             </tr>
 
                                         </tfoot>
